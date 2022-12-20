@@ -1,29 +1,32 @@
-//основное дз do..while
+var fruit = ['apple', 'pear', 'apple', 'pear', 'lemon', 'banana', 'aplle', 'pear', 'banana', 'lemon', 'apple', 'apple', 'other']
+var apple = 0;
+var pear = 0;
+var lemon = 0;
+var banana = 0;
+var other = 0;
 
-
-
-var input = prompt("Ведите свое имя")
-var blackList = ['aya', 'anna', 'jack', 'john']
-
-
-
-do{
-    if(blackList.includes(input)){
-        input = prompt('Введите имя')
-    }else{
-        alert(`Welcome ${input}`)
-        break;
+for(let i = 0; i<fruit.length; i++){
+    if (fruit[i]=="apple"){
+        apple+=1
     }
-}
-while(true)
-   
-//доп дз 
-
-for(var i = 0; i <= 20; i++){
-    let fdhnew = i/2;
-  let djd = fdhnew.toFixed(0);
-
-    if(djd==fdhnew){
-        console.log(i);
+    else if(fruit[i]=="pear"){
+        pear+=1
     }
-}
+    else if(fruit[i]=="lemon"){
+        lemon+=1
+    }
+    else if(fruit[i]=="banana"){
+        banana+=1
+    }
+    else if(fruit[i]=="other"){
+        other+=1
+    }
+    }
+
+console.log({
+apple:apple,
+pear:pear,
+lemon:lemon,
+banana:banana,
+other:other
+});
